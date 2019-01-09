@@ -1,0 +1,32 @@
+﻿@model TimeTravelAsp.Models.Transporter
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Transporter</h4>
+    <hr/>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>Passengers</dt>
+        @foreach (var passenger in Model.Passengers)
+        {
+            <dd>@Html.ActionLink(passenger.Name, "Details", "Passengers", new {id = passenger.Id})</dd>
+        }
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {id = Model.Id}) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,9 @@
+.body-content {
+    margin-top: 2rem;
+}
+
+.icon-bar {
+    height : 0px !important;
+    border-bottom :  2px solid white;
+    margin-bottom:  2px;
+}
